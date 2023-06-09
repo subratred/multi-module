@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://115.28.94.53:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf-8
+    username: test
+    password: 123456
+
+management:
+  server:
+    port: 10212
+    servlet:
+      context-path: /
+    ssl:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true #启用shutdown端点
